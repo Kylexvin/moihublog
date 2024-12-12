@@ -1,0 +1,313 @@
+:root {
+  --green-900: #064e3b;
+  --green-600: #059669;
+  --green-100: #d1fae5;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --gray-50: #f9fafb;
+  --gray-200: #e5e7eb;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+  --white: #ffffff;
+}
+
+.blog-homepage {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+  color: var(--gray-900);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Featured Post Styles */
+.featured-post {
+  position: relative;
+  height: 400px; /* Adjust this based on the desired height */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+}
+
+.featured-post-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay to improve readability */
+  z-index: 1; /* Ensure overlay is above the background image */
+}
+
+.featured-post-content {
+  position: relative;
+  z-index: 10;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.featured-tag {
+  background-color: var(--red-600);
+  color: var(--white);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+}
+
+.featured-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.featured-excerpt {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.featured-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.featured-read-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--red-600);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.featured-read-btn:hover {
+  background-color: var(--red-700);
+}
+
+.btn-icon {
+  margin-left: 8px;
+}
+
+/* Category Filter Styles */
+.category-filter {
+  display: flex;
+  flex-wrap: wrap; /* Allows categories to wrap if they exceed container width */
+  gap: 10px; /* Adjust the spacing between buttons as needed */
+  overflow: auto; /* Allows scrolling if the content overflows */
+  max-height: 100px; /* You can adjust the height based on your layout */
+  max-width: 100%; /* Ensures the container doesn't exceed its parent width */
+  margin: 32px 0;
+}
+.category-btn.active {
+  background-color: #007bff; /* Active button color */
+  color: white;
+}
+
+.category-filter::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.category-filter::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.category-filter::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.category-btn {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--gray-200);
+  color: var(--gray-900);
+}
+
+.category-btn.active {
+  background-color: var(--green-600);
+  color: var(--white);
+}
+
+.category-btn:hover:not(.active) {
+  background-color: var(--green-100);
+}
+
+/* Blog Grid Styles */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.blog-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 24px;
+}
+
+.blog-card-category {
+  color: var(--red-600);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+/* Add to your existing CSS */
+.blog-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 24px;
+}
+
+.sort-filter {
+  display: flex;
+  gap: 16px;
+}
+
+.sort-btn {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--gray-200);
+  color: var(--gray-900);
+}
+
+.sort-btn.active {
+  background-color: var(--green-600);
+  color: var(--white);
+}
+
+.sort-btn:hover:not(.active) {
+  background-color: var(--green-100);
+}
+.blog-card-title {
+  color: var(--green-900);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.blog-card-excerpt {
+  color: var(--gray-600);
+  margin-bottom: 16px;
+}
+
+.blog-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-card-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.blog-card-read-more {
+  display: flex;
+  align-items: center;
+  color: var(--green-600);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.blog-card-read-more:hover {
+  color: var(--red-600);
+}
+
+.read-more-icon {
+  margin-left: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background-color: var(--green-600);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: var(--gray-200);
+  color: var(--gray-600);
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-post {
+    height: 500px;
+  }
+
+  .featured-title {
+    font-size: 2.5rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
