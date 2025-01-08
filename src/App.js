@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/login" element={<Login setIsAuthenticated={handleLogin} />} />
         <Route path="/register" element={<Register setIsAuthenticated={handleLogin} />} />
         
-        {/* Protected Routes for logged-in users */}
+        {/* Protected Routes for logged-in users only */}
         <Route
           path="/post-list"
           element={
