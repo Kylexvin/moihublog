@@ -46,7 +46,7 @@ const App = () => {
           }
         />
 
-        {/* Edit Post Route - Protected Route */}
+        
         <Route
           path="/edit/:id"
           element={
